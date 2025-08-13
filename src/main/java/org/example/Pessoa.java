@@ -1,6 +1,8 @@
 package org.example;
+import java.io.Serializable;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String nome;
     private String dataNascimento;
 
@@ -13,21 +15,8 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {  // setter para Gson desserializar
-        this.nome = nome;
-    }
-
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) { // setter
-        this.dataNascimento = dataNascimento;
-    }
+    public String getNome() { return nome; }
+    public String getDataNascimento() { return dataNascimento; }
 
     public abstract String getTipo();
 }

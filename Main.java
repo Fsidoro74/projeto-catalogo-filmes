@@ -1,17 +1,15 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Ator ator1 = new Ator("João", "01/01/1980");
+        Diretor diretor = new Diretor("Maria", "02/02/1970");
+        Filme filme = new Filme("Filme Exemplo", "2024", 1000000, "Descrição", diretor, Arrays.asList(ator1));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Filme: " + filme.getNome());
+        System.out.println("Diretor: " + filme.getDiretor().getNome());
+        System.out.println("Atores: " + filme.getAtores().get(0).getNome());
     }
 }

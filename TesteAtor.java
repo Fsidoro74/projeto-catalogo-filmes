@@ -11,12 +11,11 @@ public class TesteAtor {
 
         // Serializar objeto para JSON
         String json = gson.toJson(ator);
-        System.out.println("Objeto serializado para JSON:");
-        System.out.println(json);
+        System.out.println("Objeto serializado para JSON: " + json);
 
         // Desserializar JSON para objeto
         Ator ator2 = gson.fromJson(json, Ator.class);
         System.out.println("Objeto desserializado do JSON:");
-        System.out.println(ator2.getNome() + " - " + ator2.getDataNascimento());
+        System.out.println("Nome: " + novoAtor.getNome() + ", Data Nasc: " + novoAtor.getDataNascimento());
     }
 }
