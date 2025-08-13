@@ -6,10 +6,6 @@ public class Ator extends Pessoa implements Serializable{
 
     private String tipo = "Ator";
 
-    public Ator() {
-
-        super();
-    }
 
     public Ator(String nome, String dataNascimento) {
 

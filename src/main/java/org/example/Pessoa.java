@@ -15,6 +15,9 @@ public abstract class Pessoa implements Serializable{
         this.dataNascimento = dataNascimento;
     }
 
+    public Pessoa(String nome) {
+    }
+
     public String getNome() { return nome; }
     public String getDataNascimento() { return dataNascimento; }
 
